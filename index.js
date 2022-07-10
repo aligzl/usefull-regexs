@@ -26,7 +26,7 @@ const postalCode = postalCode => /^[0-9]{5}$/.test(postalCode)
 const identificationNumber = identificationNumber => /^[1-9]{1}[0-9]{9}[02468]{1}$/.test(identificationNumber)
 
 /* Turkish Car Plate Number Regex */
-const carPlateNumber = carPlateNumber => /^(0[1-9]|[1-7][0-9]|8[01])(([A-Z])(\d{4,5})|([A-Z]{2})(\d{3,4})|([A-Z]{3})(\d{2,3}))$/.test(carPlateNumber)
+const carPlateNumber = carPlateNumber => /^(0[1-9]|[1-7][0-9]|8[01])(\s)(([A-Z])(\s)(\d{4,5})|([A-Z]{2})(\s)(\d{3,4})|([A-Z]{3})(\s)(\d{2}))+$/g.test(carPlateNumber)
 
 /* Birth Date Regex */
 // Formats are: dd.mm.yyyy, dd/mm/yyyy, dd-mm-yyyy , dd mm yyyy, ddmmyyyy
