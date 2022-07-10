@@ -28,6 +28,10 @@ const identificationNumber = identificationNumber => /^[1-9]{1}[0-9]{9}[02468]{1
 /* Turkish Car Plate Number Regex */
 const carPlateNumber = carPlateNumber => /^(0[1-9]|[1-7][0-9]|8[01])(\s)(([A-Z])(\s)(\d{4,5})|([A-Z]{2})(\s)(\d{3,4})|([A-Z]{3})(\s)(\d{2}))+$/g.test(carPlateNumber)
 
+/* Turkish IBAN Regex */
+// Format: TR00 00000000 0000 0000 0000 00, TR000000000000000000000000
+const iban = iban => /TR[a-zA-Z0-9]{2}\s?([0-9]{4}\s?){1}([0-9]{1})([a-zA-Z0-9]{3}\s?)([a-zA-Z0-9]{4}\s?){3}([a-zA-Z0-9]{2})\s?/.test(iban)
+
 /* Birth Date Regex */
 // Formats are: dd.mm.yyyy, dd/mm/yyyy, dd-mm-yyyy , dd mm yyyy, ddmmyyyy
 const birthDate = birthDate => /^([1-9]|[12][0-9]|3[01])(|\/|\.|\-|\s)?(0[1-9]|1[12])\2(19[0-9]{2}|200[0-9]|201[0-8])$/.test(birthDate)
